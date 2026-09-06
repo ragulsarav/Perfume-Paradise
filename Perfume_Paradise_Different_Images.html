@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Perfume Paradise — The Essence of Elegance</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,serif;color:#27231f;background:#f8f5f0}
+nav{position:fixed;top:0;width:100%;z-index:10;background:rgba(25,22,19,.96);color:#fff;padding:16px 7%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:25px;letter-spacing:7px}.tag{font:10px Arial;letter-spacing:2px;display:block;text-align:center}
+nav ul{display:flex;gap:28px;list-style:none}nav a{color:#fff;text-decoration:none;font:14px Arial}
+.hero{min-height:100vh;padding:150px 8% 70px;display:flex;align-items:center;background:linear-gradient(90deg,#eee0d0,#f8f5f0)}
+.hero-text{max-width:600px}.eyebrow{letter-spacing:4px;font:12px Arial;margin-bottom:18px}
+h1{font-size:clamp(52px,8vw,90px);font-weight:400;line-height:.98}h1 em{font-weight:400}
+.hero p{font:16px Arial;line-height:1.7;margin:25px 0}.btn{display:inline-block;background:#211e1b;color:#fff;padding:15px 27px;text-decoration:none;font:14px Arial}
+.bottle{margin-left:auto;width:330px;height:430px;display:flex;align-items:center;justify-content:center}
+.bottle img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(15px 20px 25px rgba(70,50,30,.25))}
+section{padding:90px 8%}.heading{text-align:center;margin-bottom:45px}.heading small{letter-spacing:4px;font:12px Arial}.heading h2{font-size:42px;font-weight:400;margin-top:12px}
+.products{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}.card{background:#fff;border:1px solid #e3ddd5;padding:16px}.pic{height:250px;overflow:hidden;background:linear-gradient(145deg,#e7c7bb,#f5eee7);display:flex;align-items:center;justify-content:center;font-size:22px;letter-spacing:5px}.card:nth-child(2) .pic{background:linear-gradient(145deg,#1f1b18,#806044);color:#fff}.card:nth-child(3) .pic{background:linear-gradient(145deg,#cce1dc,#eef7f3)}.card:nth-child(4) .pic{background:linear-gradient(145deg,#d9ae69,#f3dfb9)}
+.pic img{width:100%;height:100%;object-fit:cover}.card h3{margin:18px 0 8px}.card p{font:13px Arial;color:#777}.price{font:bold 18px Arial;margin:13px 0}.card button{width:100%;padding:12px;background:#211e1b;color:#fff;border:0;cursor:pointer}
+.about{background:#e9e0d5;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}.about h2{font-size:46px;font-weight:400;margin:15px 0}.about p{font:15px Arial;line-height:1.8}
+.contact{text-align:center}.contact p{font:15px Arial;margin:12px}
+footer{background:#211e1b;color:#fff;text-align:center;padding:38px}footer .logo{margin-bottom:8px}
+#cart{position:fixed;right:20px;bottom:20px;background:#211e1b;color:#fff;padding:14px 20px;border-radius:30px;font:14px Arial;z-index:20}
+@media(max-width:800px){nav ul{gap:10px}.products{grid-template-columns:1fr 1fr}.hero{display:block}.bottle{margin:70px auto 0;width:230px;height:300px}.about{grid-template-columns:1fr}}
+@media(max-width:500px){nav ul{display:none}.products{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div><div class="logo">PERFUME PARADISE</div><span class="tag">THE ESSENCE OF ELEGANCE</span></div>
+  <ul>
+    <li><a href="#home">Home</a></li><li><a href="#collection">Collection</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div id="cart">🛒 Cart: <b id="count">0</b></div>
+
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="eyebrow">WELCOME TO PERFUME PARADISE</div>
+    <h1>The Essence<br><em>of Elegance</em></h1>
+    <p>Discover timeless fragrances crafted to express your unique personality.</p>
+    <a class="btn" href="#collection">Explore Collection →</a>
+  </div>
+  <div class="bottle"><img src="https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=700&q=85" alt="AURA perfume bottle"></div>
+</section>
+
+<section id="collection">
+  <div class="heading"><small>OUR COLLECTION</small><h2>Featured Fragrances</h2></div>
+  <div class="products">
+    <div class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1592945403244-b3fbafd7f539?auto=format&fit=crop&w=700&q=85" alt="AURA perfume"></div><h3>Aura Bloom</h3><p>Floral • Soft • Elegant</p><div class="price">₹1,499</div><button onclick="add()">Add to Cart</button></div>
+    <div class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1615634260167-c8cdede054de?auto=format&fit=crop&w=700&q=85" alt="AURA perfume"></div><h3>Aura Noir</h3><p>Woody • Warm • Mysterious</p><div class="price">₹1,799</div><button onclick="add()">Add to Cart</button></div>
+    <div class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1588405748880-12d1d2a59d75?auto=format&fit=crop&w=700&q=85" alt="AURA perfume"></div><h3>Aura Mist</h3><p>Fresh • Light • Modern</p><div class="price">₹1,299</div><button onclick="add()">Add to Cart</button></div>
+    <div class="card"><div class="pic"><img src="https://images.unsplash.com/photo-1608528577891-eb055944f2e8?auto=format&fit=crop&w=700&q=85" alt="AURA perfume"></div><h3>Aura Vanilla</h3><p>Sweet • Warm • Addictive</p><div class="price">₹1,699</div><button onclick="add()">Add to Cart</button></div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div><div class="eyebrow">ABOUT PERFUME PARADISE</div><h2>Fragrance that tells your story.</h2></div>
+  <p>At AURA, we believe a fragrance is more than a scent. It is an expression of personality, memories and elegance. Our collection is designed for those who want to leave a lasting impression.</p>
+</section>
+
+<section id="contact" class="contact">
+  <div class="heading"><small>GET IN TOUCH</small><h2>Find Your Perfect Scent</h2></div>
+  <p>✉ aura@example.com</p><p>☎ +91 98765 43210</p><p>📍 Chennai, Tamil Nadu</p>
+</section>
+
+<footer><div class="logo">PERFUME PARADISE</div><div>The Essence of Elegance</div><br><small>© 2026 Perfume Paradise — College Project</small></footer>
+
+<script>
+let count=0;
+function add(){count++;document.getElementById("count").textContent=count;alert("Perfume added to cart!")}
+</script>
+</body>
+</html>
